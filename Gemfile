@@ -72,3 +72,4 @@ end
 gem 'haml', '~> 6.2', '>= 6.2.3'
 gem 'simple_form', '~> 5.3'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'devise', '~> 4.9', '>= 4.9.3'
