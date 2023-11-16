@@ -9,7 +9,10 @@
           %li= msg
 
   .form_group
+    = form.input :image, direct_upload: true, input_html: { class: 'form_control' }
+  .form_group
     = form.input :title, input_html: { class: 'form_control' }
   .form_group
     = form.input :description, input_html: { class: 'form_control' }
+
   = form.button :submit, class: "btn btn-info"

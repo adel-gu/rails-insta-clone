@@ -1,5 +1,5 @@
 class PicsController < ApplicationController
-  before_action :find_pic, only: [:show, :edit, :update, :destroy]
+  before_action :find_pic, only: %i[show edit update destroy]
 
   def index
     @pics = Pic.all.order('created_at DESC')
@@ -40,7 +40,7 @@ class PicsController < ApplicationController
   private
 
   def pic_params
-    params.require(:pic).permit(:title, :description)
+    params.require(:pic).permit(:title, :description, :image)
   end
 
   def find_pic
