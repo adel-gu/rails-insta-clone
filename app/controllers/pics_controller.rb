@@ -32,11 +32,9 @@ class PicsController < ApplicationController
   end
 
   def destroy
-    if @pic.destroy
-      redirect_to root_path, notice: 'Pic was deleted successfully!'
-    else
-      render :edit, status: :unprocessable_entity
-    end
+    @pic.destroy
+
+    redirect_to root_path, status: :see_other
   end
 
   private
